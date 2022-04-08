@@ -4,7 +4,7 @@ import com.eprogramar.bank.model.Pessoa
 import java.util.*
 
 interface PessoaService {
-    fun create(account: Pessoa): Pessoa
+    fun create(pessoa: Pessoa): Pessoa
 
     fun getAll(): List<Pessoa>
 
