@@ -9,9 +9,6 @@ import java.util.*
 @Service
 class PessoaServiceImpl(private val repository: PessoaRepository) : PessoaService {
     override fun create(pessoa: Pessoa): Pessoa {
-        Assert.hasLength(pessoa.nome, "[nome] não pode estar em branco!")
-        Assert.isTrue(pessoa.nome.length >= 3, "[nome] deve ter no minimo 3 caracteres!")
-
         return repository.save(pessoa)
     }
 
